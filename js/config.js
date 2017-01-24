@@ -9,7 +9,17 @@ System.config({
     "bundles": {
         "app.js": [
             "main.js",
-            "vendor/reveal/reveal.js"
+            "npm:babel-runtime@5.8.38/core-js/object/define-property.js",
+            "npm:babel-runtime@5.8.38/helpers/class-call-check.js",
+            "npm:babel-runtime@5.8.38/helpers/create-class.js",
+            "npm:core-js@1.2.7/library/fn/object/define-property.js",
+            "npm:core-js@1.2.7/library/modules/$.js",
+            "npm:jquery@3.1.1.js",
+            "npm:jquery@3.1.1/dist/jquery.js",
+            "vendor/bs/modal.js",
+            "vendor/bs/util.js",
+            "vendor/reveal/reveal.js",
+            "vendor/store/store.js"
         ]
     },
     "defaultJSExtensions": true,
@@ -35,6 +45,7 @@ System.config({
         "github:jspm/nodelibs-vm@0.1.0": {
             "vm-browserify": "npm:vm-browserify@0.0.4"
         },
+        "jquery": "npm:jquery@3.1.1",
         "npm:assert@1.4.1": {
             "assert": "github:jspm/nodelibs-assert@0.1.0",
             "buffer": "github:jspm/nodelibs-buffer@0.1.0",
@@ -77,6 +88,7 @@ System.config({
             "indexof": "npm:indexof@0.0.1"
         },
         "reveal.js": "vendor/reveal/reveal",
+        "store": "vendor/store/store",
         "text": "github:systemjs/plugin-text@0.0.9"
     },
     "paths": {
