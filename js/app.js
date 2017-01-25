@@ -12054,6 +12054,15 @@ $__System.register('1', ['3', '4', '5', 'c'], function (_export) {
 		});
 	}
 
+	function goToSlide(e) {
+		e.preventDefault();
+		var slide = $(e.target).data('goto');
+		if (typeof slide == 'string' && isNaN(parseInt(slide))) {
+			document.location.href = slide;
+		} else {
+			Reveal.slide(slide);
+		}
+	}
 	return {
 		setters: [function (_) {
 			$ = _['default'];
@@ -12079,13 +12088,12 @@ $__System.register('1', ['3', '4', '5', 'c'], function (_export) {
 				});
 			} else {
 				initReveal();
-			}$(document).on('hide.bs.modal', '[data-to-slide]', function (e) {
-				var slide = $(e.target).data('toSlide');
-				if (typeof slide == 'string' && isNaN(parseInt(slide))) {
-					document.location.href = slide;
-				} else {
-					Reveal.slide(slide);
-				}
+			}$(document).on('hide.bs.modal', '[data-goto]', function (e) {
+				goToSlide(e);
+			});
+
+			$(document).on('click', '[data-goto]', function (e) {
+				goToSlide(e);
 			});
 		}
 	};
