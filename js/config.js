@@ -12,9 +12,12 @@ System.config({
             "controllers/data.js",
             "controllers/transport/terminal/card.js",
             "controllers/transport/terminal/card_free.js",
+            "controllers/transport/terminal/order.js",
+            "controllers/transport/validator.js",
             "github:jspm/nodelibs-process@0.1.2.js",
             "github:jspm/nodelibs-process@0.1.2/index.js",
             "main.js",
+            "npm:babel-runtime@5.8.38/core-js/number/is-finite.js",
             "npm:babel-runtime@5.8.38/core-js/number/is-integer.js",
             "npm:babel-runtime@5.8.38/core-js/object/assign.js",
             "npm:babel-runtime@5.8.38/core-js/object/create.js",
@@ -29,6 +32,7 @@ System.config({
             "npm:babel-runtime@5.8.38/helpers/get.js",
             "npm:babel-runtime@5.8.38/helpers/inherits.js",
             "npm:babel-runtime@5.8.38/helpers/object-without-properties.js",
+            "npm:core-js@1.2.7/library/fn/number/is-finite.js",
             "npm:core-js@1.2.7/library/fn/number/is-integer.js",
             "npm:core-js@1.2.7/library/fn/object/assign.js",
             "npm:core-js@1.2.7/library/fn/object/create.js",
@@ -55,6 +59,7 @@ System.config({
             "npm:core-js@1.2.7/library/modules/$.set-proto.js",
             "npm:core-js@1.2.7/library/modules/$.to-iobject.js",
             "npm:core-js@1.2.7/library/modules/$.to-object.js",
+            "npm:core-js@1.2.7/library/modules/es6.number.is-finite.js",
             "npm:core-js@1.2.7/library/modules/es6.number.is-integer.js",
             "npm:core-js@1.2.7/library/modules/es6.object.assign.js",
             "npm:core-js@1.2.7/library/modules/es6.object.get-own-property-descriptor.js",
@@ -243,6 +248,7 @@ System.config({
             "npm:react@15.4.2/lib/reactProdInvariant.js",
             "npm:react@15.4.2/lib/traverseAllChildren.js",
             "npm:react@15.4.2/react.js",
+            "react-components/layout.js",
             "react-components/scrollbar.js",
             "vendor/bs/modal.js",
             "vendor/bs/util.js",
@@ -255,7 +261,9 @@ System.config({
     "map": {
         "babel": "npm:babel-core@5.8.38",
         "babel-runtime": "npm:babel-runtime@5.8.38",
+        "classnames": "npm:classnames@2.2.5",
         "core-js": "npm:core-js@1.2.7",
+        "dom-helpers": "npm:dom-helpers@3.2.0",
         "gemini-scrollbar": "vendor/gemini-scrollbar/index",
         "github:jspm/nodelibs-assert@0.1.0": {
             "assert": "npm:assert@1.4.1"
@@ -304,7 +312,9 @@ System.config({
         "github:jspm/nodelibs-zlib@0.1.0": {
             "browserify-zlib": "npm:browserify-zlib@0.1.4"
         },
+        "invariant": "npm:invariant@2.2.2",
         "jquery": "npm:jquery@3.1.1",
+        "lodash-compat": "npm:lodash-compat@3.10.2",
         "npm:asap@2.0.5": {
             "domain": "github:jspm/nodelibs-domain@0.1.0",
             "process": "github:jspm/nodelibs-process@0.1.2"
@@ -376,9 +386,16 @@ System.config({
         "npm:inherits@2.0.1": {
             "util": "github:jspm/nodelibs-util@0.1.0"
         },
+        "npm:invariant@2.2.2": {
+            "loose-envify": "npm:loose-envify@1.3.1",
+            "process": "github:jspm/nodelibs-process@0.1.2"
+        },
         "npm:isomorphic-fetch@2.2.1": {
             "node-fetch": "npm:node-fetch@1.6.3",
             "whatwg-fetch": "npm:whatwg-fetch@2.0.2"
+        },
+        "npm:lodash-compat@3.10.2": {
+            "process": "github:jspm/nodelibs-process@0.1.2"
         },
         "npm:loose-envify@1.3.1": {
             "fs": "github:jspm/nodelibs-fs@0.1.2",
@@ -426,6 +443,18 @@ System.config({
             "object-assign": "npm:object-assign@4.1.1",
             "process": "github:jspm/nodelibs-process@0.1.2",
             "react": "npm:react@15.4.2"
+        },
+        "npm:react-overlays@0.6.10": {
+            "classnames": "npm:classnames@2.2.5",
+            "dom-helpers": "npm:dom-helpers@2.4.0",
+            "react": "npm:react@15.4.2",
+            "react-dom": "npm:react-dom@15.4.2",
+            "react-prop-types": "npm:react-prop-types@0.4.0",
+            "warning": "npm:warning@3.0.0"
+        },
+        "npm:react-prop-types@0.4.0": {
+            "react": "npm:react@15.4.2",
+            "warning": "npm:warning@3.0.0"
         },
         "npm:react@15.4.2": {
             "fbjs": "npm:fbjs@0.8.8",
@@ -485,8 +514,14 @@ System.config({
         "npm:vm-browserify@0.0.4": {
             "indexof": "npm:indexof@0.0.1"
         },
+        "npm:warning@3.0.0": {
+            "loose-envify": "npm:loose-envify@1.3.1",
+            "process": "github:jspm/nodelibs-process@0.1.2"
+        },
         "react": "npm:react@15.4.2",
         "react-dom": "npm:react-dom@15.4.2",
+        "react-overlays": "npm:react-overlays@0.6.10",
+        "react-prop-types": "npm:react-prop-types@0.4.0",
         "reveal.js": "vendor/reveal/reveal",
         "store": "vendor/store/store",
         "text": "github:systemjs/plugin-text@0.0.9"
