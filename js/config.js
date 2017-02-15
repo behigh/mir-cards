@@ -13,8 +13,6 @@ System.config({
             "actions/corporate_cards/medical_center.js",
             "actions/corporate_cards/testing.js",
             "actions/transport/LogActions.js",
-            "components/common/box.js",
-            "components/common/card.js",
             "components/common/card_select.js",
             "components/common/card_select/card.js",
             "components/common/card_select/cards.js",
