@@ -71,6 +71,8 @@ System.config({
             "components/social_tickets/order/hall.js",
             "components/social_tickets/order/payment.js",
             "components/social_tickets/order/places.js",
+            "components/social_tickets/order/structure/stadium.js",
+            "components/social_tickets/order/structures.js",
             "components/social_tickets/services.js",
             "components/social_tickets/terminal.js",
             "components/transport/index.js",
