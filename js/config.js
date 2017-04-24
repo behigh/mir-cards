@@ -976,6 +976,7 @@ System.config({
             "reducers/gov-services/cards.js",
             "reducers/gov-services/currentCard.js",
             "reducers/gov-services/departments.js",
+            "reducers/gov-services/id.js",
             "reducers/gov-services/ordered_services.js",
             "reducers/gov-services/services.js",
             "reducers/index.js",
